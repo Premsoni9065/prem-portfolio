@@ -1,10 +1,16 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Download, ExternalLink, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import { RecruiterFeedbackForm } from "@/components/RecruiterFeedbackForm";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -305,6 +311,17 @@ export default function Home() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Recruiter Feedback Form Section */}
+      <section id="feedback" className="py-20 bg-secondary/30">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-primary mb-4 text-center">For Recruiters & HR</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Have a job opportunity or want to share feedback? Fill out the form below and I'll get back to you soon. Your inquiry will be sent directly to my email.
+          </p>
+          <RecruiterFeedbackForm />
         </div>
       </section>
 
