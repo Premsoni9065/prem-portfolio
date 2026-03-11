@@ -1,6 +1,35 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Data Analyst Portfolio - Modern Data-Driven Minimalism Design */
+/* Typography: Poppins (geometric, modern) for headings, Inter (clean) for body */
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,39 +72,40 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Data Analyst Portfolio - Modern Data-Driven Minimalism */
+  --primary: #1E3A5F; /* Deep slate blue - analytical depth and trust */
+  --primary-foreground: #F8FAFB; /* Off-white */
+  --sidebar-primary: #1E3A5F;
+  --sidebar-primary-foreground: #F8FAFB;
+  --chart-1: #00D9FF; /* Vibrant teal - data insights */
+  --chart-2: #1E3A5F;
+  --chart-3: #0099CC;
+  --chart-4: #00D9FF;
+  --chart-5: #1E3A5F;
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: #F8FAFB; /* Off-white background */
+  --foreground: #1E3A5F; /* Deep slate blue text */
+  --card: #FFFFFF;
+  --card-foreground: #1E3A5F;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E3A5F;
+  --secondary: #E8F0F7; /* Light blue-gray */
+  --secondary-foreground: #1E3A5F;
+  --muted: #D0D8E0; /* Muted gray-blue */
+  --muted-foreground: #5A6B7F;
+  --accent: #00D9FF; /* Vibrant teal accent */
+  --accent-foreground: #1E3A5F;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E0E7F0;
+  --input: #FFFFFF;
+  --ring: #00D9FF;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1E3A5F;
+  --sidebar-accent: #00D9FF;
+  --sidebar-accent-foreground: #1E3A5F;
+  --sidebar-border: #E0E7F0;
+  --sidebar-ring: #00D9FF;
 }
 
 .dark {
