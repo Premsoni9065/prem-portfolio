@@ -20,42 +20,42 @@ export default function Home() {
   }, []);
 
   const profileImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/profile_8a91d6c0.jpg";
-  const resumeUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/prem'sresume(DA)__e4eefd51.pdf";
+  const resumeUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/Prem_Kumar_Resume_c17d1f58.pdf";
   const heroImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/hero-data-visualization-9gAyRHSQi5ZCsfRe9DjRAA.webp";
   const skillsImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/skills-pattern-PG2RhBEPMVA5Bh7EcaFuJS.webp";
   const projectsImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/projects-accent-fNxwbuHiH7dNMg3zyRuwRQ.webp";
 
   const skills = [
-    { category: "Programming", items: ["Python"] },
+    { category: "Programming Languages", items: ["Python"] },
     { category: "Data Analysis & Visualization", items: ["Pandas", "NumPy", "Matplotlib", "Seaborn"] },
     { category: "Database Management", items: ["SQL", "MySQL"] },
-    { category: "Business Intelligence", items: ["Power BI"] },
+    { category: "Business Intelligence Tools", items: ["Power BI"] },
     { category: "Machine Learning", items: ["Scikit-learn"] },
   ];
 
   const projects = [
     {
       title: "WhatsApp Chat Analyzer",
-      description: "Advanced sentiment analysis and user activity tracking from WhatsApp conversations",
-      tech: ["Python", "NLP", "Machine Learning"],
+      description: "Analyzed exported WhatsApp chats for sentiment, user activity, emoji frequency, and message patterns over time to extract insights.",
+      tech: ["Python", "NLP", "ML"],
       link: "https://whatsappchatanalysising.streamlit.app/",
       highlights: ["Sentiment Analysis", "Emoji Frequency", "Message Patterns"],
     },
     {
       title: "Student Management System",
-      description: "Desktop application for managing student records, attendance, and performance",
+      description: "A desktop application to manage student records, attendance, and performance using a structured database.",
       tech: ["Python", "SQL"],
       highlights: ["Database Integration", "Record Management", "Performance Tracking"],
     },
     {
       title: "House Price Prediction",
-      description: "Machine learning model for predicting house prices based on various features",
+      description: "Machine learning model for predicting house prices based on various features.",
       tech: ["Python", "Machine Learning"],
       highlights: ["Predictive Analytics", "Feature Engineering"],
     },
     {
       title: "Breast Cancer Detection",
-      description: "ML classification model for detecting breast cancer patterns",
+      description: "ML classification model for detecting breast cancer patterns.",
       tech: ["Python", "Machine Learning"],
       highlights: ["Classification", "Medical Data Analysis"],
     },
@@ -85,6 +85,19 @@ export default function Home() {
       title: "Data Science & Machine Learning Certification",
       period: "2024",
       description: "Advanced training in data science and machine learning methodologies",
+    },
+  ];
+
+  const achievements = [
+    {
+      title: "TCS ION NQT",
+      description: "Scored 73% in TCS ION NQT in Sep 2025",
+      icon: "🏆",
+    },
+    {
+      title: "HackerRank SQL",
+      description: "Rank 1 on HackerRank in SQL",
+      icon: "⭐",
     },
   ];
 
@@ -127,7 +140,7 @@ export default function Home() {
                 Data Analyst & ML Enthusiast
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                Transforming raw data into actionable insights. Passionate about Python, SQL, Power BI, and machine learning.
+                Motivated and analytical-minded data enthusiast with hands-on internship experience in data analysis, visualization, and machine learning. Seeking an entry-level Data Analyst role where I can leverage my technical skills in Python, SQL, Power BI, and statistical modeling to extract actionable insights and drive data-driven decision-making.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -234,9 +247,18 @@ export default function Home() {
               </Card>
             ))}
           </div>
-          <div className="mt-12 p-8 bg-primary text-primary-foreground rounded-xl">
-            <h3 className="text-2xl font-bold mb-4">🏆 Achievement</h3>
-            <p className="text-lg">Rank 1 on HackerRank in SQL - Demonstrating advanced database querying and optimization skills</p>
+          <div className="mt-12 space-y-4">
+            {achievements.map((achievement, idx) => (
+              <div key={idx} className="p-6 bg-primary text-primary-foreground rounded-xl hover:shadow-lg transition">
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl">{achievement.icon}</span>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{achievement.title}</h3>
+                    <p className="text-primary-foreground/90">{achievement.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -245,40 +267,43 @@ export default function Home() {
       <section id="projects" className="py-20 bg-secondary/30">
         <div className="container">
           <h2 className="text-4xl font-bold text-primary mb-12">Featured Projects</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {projects.map((project, idx) => (
-              <Card key={idx} className="p-8 hover:shadow-xl transition group">
+              <Card key={idx} className="p-8 hover:shadow-lg transition border-l-4 border-l-accent">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-primary group-hover:text-accent transition">
-                    {project.title}
-                  </h3>
+                  <h3 className="text-2xl font-bold text-primary flex-1">{project.title}</h3>
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-5 h-5 text-accent hover:text-primary transition" />
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="ml-2">
+                      <ExternalLink className="w-5 h-5 text-accent hover:text-accent/80" />
                     </a>
                   )}
                 </div>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="mb-4">
-                  <p className="text-sm font-semibold text-primary mb-2">Highlights:</p>
+                  <p className="text-sm font-semibold text-primary mb-2">Tech Stack:</p>
                   <div className="flex flex-wrap gap-2">
-                    {project.highlights.map((highlight, i) => (
+                    {project.tech.map((tech, i) => (
                       <Badge key={i} variant="outline" className="border-accent text-accent">
-                        {highlight}
+                        {tech}
                       </Badge>
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
-                  {project.tech.map((tech, i) => (
-                    <Badge key={i} className="bg-primary/10 text-primary">
-                      {tech}
-                    </Badge>
-                  ))}
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-2">Highlights:</p>
+                  <ul className="space-y-1">
+                    {project.highlights.map((highlight, i) => (
+                      <li key={i} className="text-sm text-muted-foreground flex items-center">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </Card>
             ))}
           </div>
+
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">More projects available on GitHub</p>
             <a href="https://github.com/Premsoni9065" target="_blank" rel="noopener noreferrer">
@@ -333,7 +358,7 @@ export default function Home() {
             I'm always interested in hearing about new opportunities and projects. Feel free to reach out!
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:mejpremkumar9@gmail.com">
+            <a href="mailto:meipremkumar9@gmail.com">
               <Button size="lg" variant="secondary">
                 <Mail className="w-5 h-5 mr-2" />
                 Email Me
