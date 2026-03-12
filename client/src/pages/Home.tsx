@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   const profileImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/profile_8a91d6c0.jpg";
-  const resumeUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/Prem_Kumar_Resume_c17d1f58.pdf";
+  const resumeUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/Prem's__resume_57f3aae5.pdf";
   const heroImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/hero-data-visualization-9gAyRHSQi5ZCsfRe9DjRAA.webp";
   const skillsImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/skills-pattern-PG2RhBEPMVA5Bh7EcaFuJS.webp";
   const projectsImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663426521570/WRLM2DJhmhqpVMtVkFvkWm/projects-accent-fNxwbuHiH7dNMg3zyRuwRQ.webp";
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="space-y-6 animate-fade-in">
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold text-primary mb-4">
-                Data Analyst & ML Enthusiast
+                Data Analytics
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
                 Motivated and analytical-minded data enthusiast with hands-on internship experience in data analysis, visualization, and machine learning. Seeking an entry-level Data Analyst role where I can leverage my technical skills in Python, SQL, Power BI, and statistical modeling to extract actionable insights and drive data-driven decision-making.
