@@ -137,7 +137,7 @@ export default function Home() {
           <div className="space-y-6 animate-fade-in">
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold text-primary mb-4">
-                Data Analytics
+                Data Analyst
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
                 Motivated and analytical-minded data enthusiast with hands-on internship experience in data analysis, visualization, and machine learning. Seeking an entry-level Data Analyst role where I can leverage my technical skills in Python, SQL, Power BI, and statistical modeling to extract actionable insights and drive data-driven decision-making.
